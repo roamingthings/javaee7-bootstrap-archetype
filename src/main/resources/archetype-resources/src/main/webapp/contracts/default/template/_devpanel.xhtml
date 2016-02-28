@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+>
+
+<h:head>
+    <title></title>
+</h:head>
+
+<h:body>
+    <ui:composition>
+        <ui:fragment rendered="#{facesContext.application.projectStage eq 'Development'}">
+            <div class="row well">
+                <div id="developer-pnl" class="col-sm-12">
+                    <div>This is page with ID <em>#{pageId}</em></div>
+                    <div>Principal: #{request.userPrincipal.name}</div>
+                    <div>In flow: #{null != facesContext.application.flowHandler.currentFlow}</div>
+                    <div>Flow Id: #{facesContext.application.flowHandler.currentFlow.id}</div>
+                    <div>Current locale: #{facesContext.viewRoot.locale}</div>
+                </div>
+            </div>
+        </ui:fragment>
+    </ui:composition>
+</h:body>
+
+</html>

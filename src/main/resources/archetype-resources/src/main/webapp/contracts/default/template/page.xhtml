@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cleartype" content="on"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <link rel="shortcut icon" href="#{request.contextPath}/assets/ico/favicon.ico"/>
+
+    <title><ui:insert name="pageTitle">Page Title</ui:insert></title>
+
+    <link rel="stylesheet" href="#{request.contextPath}/vendor/bootstrap/css/bootstrap-site.css"/>
+    <link rel="stylesheet" href="#{request.contextPath}/assets/css/site.css"/>
+
+    <ui:insert name="pageStylesheets"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        contextPath = '#{request.contextPath}';
+    </script>
+</h:head>
+
+<h:body styleClass="page-#{pageId}">
+
+    <a name="pageStart"/>
+
+    <div class="container">
+        <ui:include src="_header.xhtml"/>
+
+        <ui:include src="_messages.xhtml"/>
+
+        <ui:insert name="content"/>
+
+        <ui:include src="_footer.xhtml"/>
+        <ui:include src="_devpanel.xhtml"/>
+    </div>
+
+    <ui:insert name="bodyBottomScriptArea">
+        <ui:include src="/template/_scripts.xhtml"/>
+    </ui:insert>
+</h:body>
+
+</html>

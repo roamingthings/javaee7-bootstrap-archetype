@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title></title>
+</h:head>
+<f:metadata>
+    <c:set var="pageId" value="index"/>
+</f:metadata>
+<h:body>
+    <ui:composition template="/template/page.xhtml">
+        <ui:define name="pageTitle">Home</ui:define>
+
+        <ui:define name="content">
+            <h1>#{texts.welcome}</h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>This is the content of the index page.</p>
+                </div>
+            </div>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
