@@ -29,6 +29,9 @@
             </includes>
         </fileSet>
         <fileSet filtered="false" packaged="false" encoding="UTF-8">
+            <directory>src/main/less</directory>
+        </fileSet>
+        <fileSet filtered="false" packaged="false" encoding="UTF-8">
             <directory>src/main/filtered-webapp</directory>
         </fileSet>
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
