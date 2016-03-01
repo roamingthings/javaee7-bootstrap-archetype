@@ -57,6 +57,7 @@
         <fileSet filtered="true" packaged="false" encoding="UTF-8">
             <directory></directory>
             <includes>
+                <include>.gitignore</include>
                 <include>README.md</include>
             </includes>
         </fileSet>
