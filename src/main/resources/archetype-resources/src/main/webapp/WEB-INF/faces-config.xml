@@ -4,7 +4,7 @@
               version="2.2">
     <application>
         <resource-bundle>
-            <base-name>de.roamingthings.essential.resources.texts</base-name>
+            <base-name>${package}.resources.texts</base-name>
             <var>texts</var>
         </resource-bundle>
     </application>
